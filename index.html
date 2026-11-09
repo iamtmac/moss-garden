@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>钱胤卿 | 个人空间 · 解决方案专家 & MOSS开源内核</title>
+  <meta name="description" content="钱胤卿的个人数字主页。专注于数据要素合规流转平台、大型复杂数字系统、AI实战架构哲学与MOSS轻量开源智能体内核。">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#0052D9',
+              600: '#1D4ED8',
+              700: '#1e40af',
+              navy: '#07193F',
+              slate: '#0F172A',
+              cyan: '#00C3FF',
+              ice: '#F4F8FD',
+            }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background: linear-gradient(180deg, #F8FAFD 0%, #EEF5FC 40%, #F8FAFD 100%);
+      color: #1E293B;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(205, 224, 248, 0.7);
+      box-shadow: 0 10px 30px -10px rgba(7, 25, 63, 0.06);
+    }
+    .glass-card-hover {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-3px);
+      border-color: #93C5FD;
+      box-shadow: 0 20px 40px -12px rgba(0, 82, 217, 0.12);
+    }
+    .tech-border-l {
+      border-left: 4px solid #0052D9;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans selection:bg-brand-500 selection:text-white">
+
+  <!-- ================= 顶部全局导航栏 ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-blue-100/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-brand-cyan flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          Q
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-brand-navy tracking-tight text-base leading-snug">钱胤卿 · 数字空间</span>
+          <span class="text-[10px] text-slate-500 font-medium">系统架构师 · 解决方案专家 · AI 开源</span>
+        </div>
+      </a>
+
+      <!-- 桌面端菜单 -->
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-600">
+        <a href="#hero" class="hover:text-brand-500 transition-colors">概览</a>
+        <a href="#flagship-platform" class="hover:text-brand-500 transition-colors flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          某市数据要素平台
+        </a>
+        <a href="#flagship-moss" class="hover:text-brand-500 transition-colors flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+          MOSS 开源设计
+        </a>
+        <a href="#projects" class="hover:text-brand-500 transition-colors">重大工程</a>
+        <a href="#insights" class="hover:text-brand-500 transition-colors">AI 架构哲学</a>
+        <a href="#credentials" class="hover:text-brand-500 transition-colors">资质荣誉</a>
+      </nav>
+
+      <!-- 快速联系 CTA -->
+      <div class="flex items-center space-x-3">
+        <a href="#connect" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold shadow-sm shadow-blue-600/20 hover:shadow-md transition-all">
+          <i class="ph ph-chat-circle-dots text-base"></i>
+          <span>交流对接</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ================= 1. HERO 首屏个人名片区 ================= -->
+    <section id="hero" class="pt-12 pb-16 md:py-20 relative overflow-hidden">
+      <!-- 装饰背景光斑 -->
+      <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-blue-200/40 via-cyan-200/30 to-indigo-200/40 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- 左侧文字介绍 -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex flex-wrap items-center gap-2">
+              <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200/60">
+                <i class="ph-bold ph-shield-check mr-1"></i>系统架构设计师（高级）
+              </span>
+              <span class="badge-pill bg-cyan-50 text-cyan-700 border border-cyan-200/60">
+                <i class="ph-bold ph-cpu mr-1"></i>AI 应用开发工程师（高级）
+              </span>
+              <span class="badge-pill bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                <i class="ph-bold ph-tree-structure mr-1"></i>人工智能训练师
+              </span>
+              <span class="badge-pill bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                <i class="ph-bold ph-kanban mr-1"></i>PMP 项目管理专家
+              </span>
+            </div>
+
+            <div class="space-y-3">
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight">
+                连接产业数据要素底座<br/>
+                <span class="bg-gradient-to-r from-brand-500 to-cyan-600 bg-clip-text text-transparent">开源自主 AI 智能体内核</span>
+              </h1>
+              <p class="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
+                你好，我是 <span class="font-bold text-brand-navy">钱胤卿</span>。一个兼具复杂政企数字系统攻坚与前沿 AI 研发热情的实战派。
+                深耕数字化改革、大数据治理与数据要素市场十余年，累计主导及深度推进重大项目金额超 <strong class="text-brand-navy">1.2 亿元</strong>。
+                在某市数据产业公共服务平台建设中担纲<strong class="text-brand-500">项目 · 产品 · 数据</strong>全栈统筹；
+                基于实战中沉淀的第一性原理，在本站发起并开源 <strong class="text-brand-600">MOSS 轻量智能体基础框架与最新设计稿</strong>。
+              </p>
+            </div>
+
+            <!-- 核心数据指标保障条 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                <div class="text-2xl font-black text-brand-500">1.2亿+</div>
+                <div class="text-xs text-slate-500 mt-0.5">主导推进重大工程</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                <div class="text-2xl font-black text-brand-navy">五端+双域</div>
+                <div class="text-xs text-slate-500 mt-0.5">数据要素合规架构</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                <div class="text-2xl font-black text-brand-navy">三高级资质</div>
+                <div class="text-xs text-slate-500 mt-0.5">架构师/AI/PMP认证</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                <div class="text-2xl font-black text-cyan-600">MOSS</div>
+                <div class="text-xs text-slate-500 mt-0.5">极简内核与设计稿</div>
+              </div>
+            </div>
+
+            <!-- 快捷行动按钮 -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#flagship-platform" class="px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-slate-800 text-white font-medium text-sm inline-flex items-center gap-2 shadow-sm transition-all">
+                <span>深入数据要素平台标杆</span>
+                <i class="ph ph-arrow-down-right"></i>
+              </a>
+              <a href="#flagship-moss" class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm inline-flex items-center gap-2 shadow-sm transition-all">
+                <i class="ph ph-git-branch"></i>
+                <span>查阅 MOSS 设计稿与开源内核</span>
+              </a>
+              <a href="#connect" class="px-4 py-2.5 rounded-xl bg-white hover:bg-blue-50/50 border border-blue-200 text-slate-700 font-medium text-sm inline-flex items-center gap-1.5 transition-all">
+                <i class="ph ph-phone-call text-brand-500"></i>
+                <span>获取联系方式</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 右侧个人形象卡片 -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-sm">
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-lg opacity-25"></div>
+              <div class="relative glass-card rounded-2xl p-4 shadow-xl overflow-hidden">
+                <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-100 relative group">
+                  <img src="assets/avatar.jpg" alt="钱胤卿" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+                    <div class="font-bold text-xl">钱胤卿</div>
+                    <div class="text-xs text-blue-200 mt-0.5">系统架构师 · 解决方案专家 · AI 开源</div>
+                  </div>
+                </div>
+
+                <div class="pt-4 space-y-2.5 text-xs text-slate-600">
+                  <div class="flex items-center justify-between pb-2 border-b border-blue-50">
+                    <span class="text-slate-400">专业资质：</span>
+                    <span class="font-semibold text-slate-800">系统架构设计师(高级) · PMP · AI工程师</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-blue-50">
+                    <span class="text-slate-400">学科背景：</span>
+                    <span class="font-semibold text-slate-800">信息管理与信息系统（科班工学）</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-slate-400">核心专注：</span>
+                    <span class="font-semibold text-brand-500">数据要素流通 · 产业大脑 · MOSS开源</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= 2. 重量级旗舰专区 1：某市数据产业公共服务平台 ================= -->
+    <section id="flagship-platform" class="py-16 bg-white border-y border-blue-100/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- 板块标头 -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-blue-100">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-brand-500 tracking-wider uppercase">
+              <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+              代表性标杆重大工程 · 全栈统筹
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+              某市数据产业公共服务平台
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl">
+              服务地方重点大数据发展集团，构建国内领先的“双域融合 + 五端协同 + 区块链与隐私计算底座”数据要素市场化全生命周期基础设施。
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0 flex items-center gap-2">
+            <span class="badge-pill bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <i class="ph-bold ph-check-circle mr-1"></i>订单超千万元
+            </span>
+            <span class="badge-pill bg-blue-50 text-blue-700 border border-blue-200">
+              <i class="ph-bold ph-trophy mr-1"></i>全国数据要素创新大赛二等奖
+            </span>
+          </div>
+        </div>
+
+        <!-- 全栈职责定位卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="glass-card rounded-2xl p-6 tech-border-l">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-500 flex items-center justify-center text-xl mb-3">
+              <i class="ph-bold ph-kanban"></i>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy">1. 项目负责人 (Project Lead)</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              全面负责公司级重大项目推进与客户深度服务；主持编写 20 余项数据要素合规流通制度体系；组织完成客户安全检查制度补充、标杆申报与核心交付，获得客户官方书面感谢信。
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 tech-border-l">
+            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-xl mb-3">
+              <i class="ph-bold ph-browsers"></i>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy">2. 产品架构师 (Product Architect)</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              主导顶层功能与业务闭环规划：设计“门户（前台供需）+ 实验 / 经营 / 交付 / 安全四端（后台协同）”产品矩阵；实现用户身份统一（SSO）、工位预约、数据商品上架与交易所无缝打通。
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 tech-border-l">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-3">
+              <i class="ph-bold ph-database"></i>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy">3. 数据与安全架构 (Data & Security)</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              落地“互联网域（开放实验室）+ 政务网域（高敏数据）”双域融合架构；集成区块链存证溯源底座、隐私计算联合计算、中转服务跨域单向同步与出域审查，实现“可用不可见、可控可计量”。
+            </p>
+          </div>
+        </div>
+
+        <!-- 架构全景与技术亮点解读 -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-white to-blue-50/50">
+          <div class="text-base font-bold text-brand-navy mb-4 flex items-center gap-2">
+            <i class="ph ph-tree-structure text-brand-500 text-lg"></i>
+            <span>平台系统工程核心架构全景</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-blue-100 shadow-sm">
+              <div class="font-bold text-brand-navy mb-1.5 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>双域融合部署模式
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                互联网域服务社会流通供需，政务网域承载高管控核心数据。通过集群中转服务与安全网关实现严格受控的跨域交互。
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-blue-100 shadow-sm">
+              <div class="font-bold text-brand-navy mb-1.5 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cyan-500"></span>五端协同业务平面
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                包含门户端（供需浏览与商品选购）、实验端（场景加工验证）、经营端（配置与目录审计）、交付端（合规审查）与运维端。
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-blue-100 shadow-sm">
+              <div class="font-bold text-brand-navy mb-1.5 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>区块链与隐私计算底座
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                关键数据流转与授权全部通过区块链存证上链，对接隐私计算节点支持多方安全计算，满足《数安法》《个保法》合规底线。
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-blue-100 shadow-sm">
+              <div class="font-bold text-brand-navy mb-1.5 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>交易所生态互联
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                无缝直连国家级与省市重点大数据交易枢纽，支持加工产物与数据产品一键跨平台挂牌上架交易。
+              </p>
+            </div>
+          </div>
+
+          <!-- 客户与荣誉证明引用 -->
+          <div class="mt-6 pt-5 border-t border-blue-100/80 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-slate-500 gap-3">
+            <div class="flex items-center gap-2">
+              <i class="ph-fill ph-seal-check text-emerald-600 text-base"></i>
+              <span>获<strong>市级大数据发展集团</strong>官方书面感谢信，点名表彰项目方案的专业深度与高度责任心。</span>
+            </div>
+            <div class="text-slate-400">工业级全栈交付标准</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 3. 重量级旗舰专区 2：MOSS 智能体开源基础框架 & 最新设计稿 ================= -->
+    <section id="flagship-moss" class="py-16 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden border-2 border-blue-200/80 bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/50">
+          <div class="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- 顶部定位说明 -->
+          <div class="max-w-4xl space-y-4 mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 text-brand-600 text-xs font-bold">
+              <i class="ph-bold ph-git-merge"></i>
+              <span>Open Source & Design Gallery · 本站基础框架开源与设计稿</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+              MOSS (Modular Open-Source System)
+            </h2>
+            <p class="text-sm font-semibold text-brand-500">
+              轻量级自主 Agent 极简工程内核与自主可控执行引擎
+            </p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              MOSS 是在经历了多年千万级复杂系统治理、数据要素合规流转与前沿大模型工程落地后，沉淀出的一套<strong>反虚浮、重实证、物理可控的轻量开源 Agent 基础框架</strong>。
+              杜绝臃肿黑盒框架绑架，直接在本站开源极简核心代码，并公开脱敏后的最新全套系统界面视窗、时序记忆引擎拓扑与工业设计蓝图。
+            </p>
+          </div>
+
+          <!-- ================= MOSS 最新设计稿与界面视窗展廊 (已脱敏) ================= -->
+          <div class="mb-12">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2 text-sm font-bold text-brand-navy">
+                <i class="ph-bold ph-monitor text-brand-500 text-lg"></i>
+                <span>MOSS 最新设计视窗与实战原型展廊 (已脱敏)</span>
+              </div>
+              <span class="text-xs text-slate-400">点击小图即可查看大图与设计理念</span>
+            </div>
+
+            <!-- 设计稿与界面网格 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              
+              <!-- 视窗 1：控制台 Workbench -->
+              <div class="glass-card rounded-2xl p-4 border border-blue-200/80 group">
+                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border border-slate-700/60 relative">
+                  <img src="assets/moss/ui_console.png" alt="MOSS 控制台工作台" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur text-[10px] text-cyan-300 font-mono">
+                    Console / Workbench
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h4 class="font-bold text-brand-navy text-xs flex items-center justify-between">
+                    <span>1. 智能体核心控制台 (Workbench)</span>
+                    <span class="badge-pill bg-blue-50 text-brand-500">已脱敏</span>
+                  </h4>
+                  <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    常驻全局导航枢纽，实时呈现 Agent 运行状态、上下文意图流动及业务调度总览。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 2：4M1E 业务全要素图谱 -->
+              <div class="glass-card rounded-2xl p-4 border border-blue-200/80 group">
+                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border border-slate-700/60 relative">
+                  <img src="assets/moss/ui_4m1e.png" alt="4M1E 实体记忆图谱" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur text-[10px] text-emerald-300 font-mono">
+                    4M1E Context Graph
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h4 class="font-bold text-brand-navy text-xs flex items-center justify-between">
+                    <span>2. 4M1E 实体与企业全要素图谱</span>
+                    <span class="badge-pill bg-emerald-50 text-emerald-600">消除幻觉</span>
+                  </h4>
+                  <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    人、机、料、法、环物理语义关联，为大模型推理提供坚固的产业上下文证据链。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 3：艾宾浩斯时序记忆引擎 -->
+              <div class="glass-card rounded-2xl p-4 border border-blue-200/80 group">
+                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border border-slate-700/60 relative">
+                  <img src="assets/moss/ui_ebbinghaus.png" alt="艾宾浩斯时序记忆引擎" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur text-[10px] text-yellow-300 font-mono">
+                    Ebbinghaus Memory
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h4 class="font-bold text-brand-navy text-xs flex items-center justify-between">
+                    <span>3. 艾宾浩斯时序记忆衰减引擎</span>
+                    <span class="badge-pill bg-yellow-50 text-amber-600">时序记忆</span>
+                  </h4>
+                  <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    模拟人类大脑遗忘曲线，实现长短期记忆自主加权、动态蒸馏与时序对齐。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 4：三层架构设计拓扑 -->
+              <div class="glass-card rounded-2xl p-4 border border-blue-200/80 group">
+                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-white border border-blue-100 relative">
+                  <img src="assets/moss/arch_three_layer.png" alt="MOSS 三层架构蓝图" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-blue-900/80 backdrop-blur text-[10px] text-white font-mono">
+                    Architecture Blueprint
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h4 class="font-bold text-brand-navy text-xs flex items-center justify-between">
+                    <span>4. MOSS 极简三层架构蓝图</span>
+                    <span class="badge-pill bg-indigo-50 text-indigo-600">解耦标准</span>
+                  </h4>
+                  <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    上层意图调度 ➔ 中层记忆图谱与执行内核 ➔ 底层工具与异构算力基础设施。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 5：多端协同与协议连接器 -->
+              <div class="glass-card rounded-2xl p-4 border border-blue-200/80 group">
+                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border border-slate-700/60 relative">
+                  <img src="assets/moss/ui_connectors.png" alt="多端协同与连接器中枢" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur text-[10px] text-cyan-300 font-mono">
+                    Bridge Connectors
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h4 class="font-bold text-brand-navy text-xs flex items-center justify-between">
+                    <span>5. 多端协同与企业通讯连接器</span>
+                    <span class="badge-pill bg-cyan-50 text-cyan-700">全渠道触达</span>
+                  </h4>
+                  <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    无缝连接企业办公端（微信/钉钉）、移动终端与本地守护进程，实现端云安全协同。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 6：工业硬件/CMF 概念渲染图 -->
+              <div class="glass-card rounded-2xl p-4 border border-blue-200/80 group">
+                <div class="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border border-slate-700/60 relative">
+                  <img src="assets/moss/04_cmf_prototype_render_zh.jpg" alt="MOSS CMF 原型设计渲染" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur text-[10px] text-rose-300 font-mono">
+                    Hardware Prototype
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h4 class="font-bold text-brand-navy text-xs flex items-center justify-between">
+                    <span>6. 软硬一体自主智能终端设计</span>
+                    <span class="badge-pill bg-rose-50 text-rose-600">原型概念</span>
+                  </h4>
+                  <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    探索自主可控本地算力盒子与端侧 AI 一体机的 CMF 工业设计理念。
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= MOSS 实战总结的四大架构真经 ================= -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-6 border-t border-blue-100">
+            
+            <div class="lg:col-span-7 space-y-4">
+              <div class="text-sm font-bold text-brand-navy flex items-center gap-2">
+                <i class="ph-bold ph-lightbulb-filament text-amber-500 text-lg"></i>
+                <span>与模型长期对话碰撞沉淀的四大架构真经</span>
+              </div>
+
+              <div class="space-y-3">
+                <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                  <div class="font-bold text-xs sm:text-sm text-brand-navy flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                    <span>1. 上下文优先律 (The Context Invariant)</span>
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    <em>“很多情况 Agent 不是缺少智能，而是缺少上下文。”</em> 
+                    拒绝玄学调参。MOSS 将大模型作为基于物理上下文的概率推理机，构建端侧常驻状态、时序记忆星图与现场一手凭证管道，彻底消灭虚假无源推理。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                  <div class="font-bold text-xs sm:text-sm text-brand-navy flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
+                    <span>2. 抗伪需求与物理反馈实操律 (Anti-Fake-Requirement)</span>
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    <em>“只有看到系统运行不符合预期时，才知道自己实际要的是什么。”</em>
+                    反对停留在自然语言假想中臆造复杂架构。MOSS 坚持以“端到端垂直切片（Vertical Slice）与最小可运行闭环”先行落地，用物理代码和实跑碰撞暴露边界、消灭伪需求。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                  <div class="font-bold text-xs sm:text-sm text-brand-navy flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>3. 源码透明与极简模块化解耦 (Modular Decoupling)</span>
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    <em>“源码公开透明，Agent 一读就知道每个模块是干什么用的。”</em>
+                    杜绝黑盒大一统框架。将架构严格切分为 <strong>Router（高维意图路由）</strong>、<strong>Executor（确定性执行）</strong>、<strong>Memory（记忆引擎）</strong>与 <strong>Bridge（端侧出站）</strong>，极简透明、随调随测、可自由热插拔。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/90 border border-blue-100 shadow-sm">
+                  <div class="font-bold text-xs sm:text-sm text-brand-navy flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                    <span>4. 反廉价修补与 N+1 泛化门禁 (Anti-Prompt-Fix Reflex)</span>
+                  </div>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    严禁“改 Prompt 碰运气”和“打地鼠式单测硬编码特例”。推行物理因果链路穿透、默认退化诚实安全锁（Fail-Closed Invariant）与反脆弱性单测门禁，保障系统面对未知第 N+1 个输入时不崩溃。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 互动与获取 CTA -->
+              <div class="pt-2 flex flex-wrap items-center gap-3">
+                <a href="#connect" class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-xs inline-flex items-center gap-2 shadow-sm transition-all">
+                  <i class="ph ph-download-simple"></i>
+                  <span>获取 MOSS 极简框架源码与脚手架</span>
+                </a>
+                <a href="#connect" class="px-4 py-2.5 rounded-xl bg-white hover:bg-blue-50 border border-blue-200 text-slate-700 font-medium text-xs inline-flex items-center gap-1.5 transition-all">
+                  <i class="ph ph-chats-circle text-brand-500"></i>
+                  <span>申请开发者共建讨论</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 右侧极简框架源码结构与终端预览 -->
+            <div class="lg:col-span-5 space-y-4">
+              <div class="rounded-2xl bg-brand-navy p-5 text-white font-mono text-xs shadow-2xl border border-blue-900/50 space-y-3">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-700">
+                  <div class="flex space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                  </div>
+                  <span class="text-slate-400 text-[11px]">moss-core / structure</span>
+                </div>
+                
+                <div class="text-slate-300 space-y-1">
+                  <p class="text-emerald-400 font-bold">// 极简透明模块化目录规范</p>
+                  <p class="text-slate-400">moss/</p>
+                  <p class="pl-4 text-cyan-300">├── router/        <span class="text-slate-500"># 高维意图路由器 (纯语义分类)</span></p>
+                  <p class="pl-4 text-cyan-300">├── executor/      <span class="text-slate-500"># 物理执行器 (确定性工具链)</span></p>
+                  <p class="pl-4 text-cyan-300">├── memory/        <span class="text-slate-500"># 时序记忆与端侧常驻状态</span></p>
+                  <p class="pl-4 text-cyan-300">├── gate/          <span class="text-slate-500"># N+1 泛化与 Fail-Closed 门禁</span></p>
+                  <p class="pl-4 text-cyan-300">└── bridge/        <span class="text-slate-500"># 端侧与多端通信适配器</span></p>
+                </div>
+
+                <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] text-blue-200">
+                  <code># 极简一键启动单一切片</code><br>
+                  <span class="text-slate-400">&gt; python -m moss.run --check-context</span><br>
+                  <span class="text-emerald-400">[PASS] Context invariant verified.</span><br>
+                  <span class="text-slate-400">[INFO] Ready for empirical loop.</span>
+                </div>
+              </div>
+
+              <!-- 理念总结贴纸 -->
+              <div class="p-4 rounded-xl bg-white/90 border border-blue-100 shadow-sm text-xs space-y-1.5">
+                <div class="font-bold text-brand-navy flex items-center gap-1.5">
+                  <i class="ph-bold ph-lightbulb text-amber-500"></i>
+                  <span>人机协同开发范式 (Orchestration)</span>
+                </div>
+                <p class="text-slate-500 leading-relaxed">
+                  <em>“驾驭顶级模型干一个公司的活；顶级模型用于架构定型后的全量重构，而不是在混乱泥潭中打补丁。”</em>
+                  以专家架构为骨架，赋能 Agent 开展端到端高密度重构。
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 4. 其他重大工程与产业大脑矩阵 ================= -->
+    <section id="projects" class="py-16 bg-white border-y border-blue-100/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="text-xs font-bold text-brand-500 uppercase tracking-wider mb-2">Track Record</div>
+          <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">
+            重大数字化改革与产业大脑工程矩阵
+          </h2>
+          <p class="text-sm text-slate-600 mt-2">
+            多年来负责或深度参与的省市级千万级工程，经受国家级、省委主要领导考察及客户高度赞誉。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- 项目 1 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200">总包 5050 万元</span>
+                <span class="text-xs text-slate-400 font-medium">科创数字化标杆</span>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">某市“新材云创”科创大脑</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                在无后端支持和公司无新材料积累情况下独立驻场，完成售前、可研与领导汇报原型设计。获<strong>华为首位点名表扬</strong>，成为后续大量合作基石；获省委主要领导考察。
+              </p>
+            </div>
+            <div class="pt-3 border-t border-blue-50 flex items-center justify-between text-xs text-slate-500">
+              <span>角色：售前方案 / 原型 / 驻场</span>
+              <span class="text-brand-500 font-medium">华为感谢信</span>
+            </div>
+          </div>
+
+          <!-- 项目 2 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200">项目 3350 万元</span>
+                <span class="text-xs text-slate-400 font-medium">产业数智赋能</span>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">某市“五城十链”数智赋能平台</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                承担商务与解决方案双重职责。彻底摸清区域工业本底形成数据资产，用数据价值化与产品化新模式赋能产业集聚。被客户多次表扬，并<strong>被经信局指定借调</strong>。
+              </p>
+            </div>
+            <div class="pt-3 border-t border-blue-50 flex items-center justify-between text-xs text-slate-500">
+              <span>角色：商务 / 解决方案 / 运营</span>
+              <span class="text-brand-500 font-medium">政府指定借调函</span>
+            </div>
+          </div>
+
+          <!-- 项目 3 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200">总包 960 万元</span>
+                <span class="text-xs text-slate-400 font-medium">省数改最佳应用</span>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">某省域“中药产业大脑”标杆平台</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                承担商务、解决方案、产品设计与项目经理全流程。获得国家级与省部级领导高度认可，获评<strong>省级数字化改革最佳应用</strong>；获地方政府主要领导点名表扬并陪同前往省厅汇报。
+              </p>
+            </div>
+            <div class="pt-3 border-t border-blue-50 flex items-center justify-between text-xs text-slate-500">
+              <span>角色：解决方案 / 产品设计 / PM</span>
+              <span class="text-emerald-600 font-medium">省数改最佳应用</span>
+            </div>
+          </div>
+
+          <!-- 项目 4 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200">金额 200 万元</span>
+                <span class="text-xs text-slate-400 font-medium">智慧党建中枢</span>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">某市重点“智慧党建云”中枢系统</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                担任项目主要负责人，协调腾讯、移动等多厂商集成，组织谋划领导拜访与宣传发布。获市委市政府高度认可，<strong>受邀进入全市数字化改革专班</strong>。
+              </p>
+            </div>
+            <div class="pt-3 border-t border-blue-50 flex items-center justify-between text-xs text-slate-500">
+              <span>角色：项目主要负责人 / 厂商协调</span>
+              <span class="text-brand-500 font-medium">抽调市数改专班</span>
+            </div>
+          </div>
+
+          <!-- 项目 5 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200">大型交通工程</span>
+                <span class="text-xs text-slate-400 font-medium">军民融合落地</span>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">机动车不礼让行人智能管控 (960万)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                负责军民融合项目对接与实施落地，推进交通视觉智能感知系统与市级政务系统的平稳上线。当选年度销售冠军与优秀员工。
+              </p>
+            </div>
+            <div class="pt-3 border-t border-blue-50 flex items-center justify-between text-xs text-slate-500">
+              <span>角色：项目经理 / 市场对接</span>
+              <span class="text-slate-600 font-medium">年度销售冠军</span>
+            </div>
+          </div>
+
+          <!-- 项目 6 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-blue-50 text-brand-500 border border-blue-200">云计算与生态</span>
+                <span class="text-xs text-slate-400 font-medium">重大公共设施</span>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">干部学院云桌面 & 智慧生态平台</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                推动干部学院云桌面(400万)、老年大学智慧校园(500万)、智慧环保一期(200万)等多个大型云计算与智慧化项目平稳交付。
+              </p>
+            </div>
+            <div class="pt-3 border-t border-blue-50 flex items-center justify-between text-xs text-slate-500">
+              <span>角色：方案推进 / 项目管理</span>
+              <span class="text-slate-600 font-medium">稳定交付</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 5. AI 实战思考与架构哲学 ================= -->
+    <section id="insights" class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-blue-100">
+          <div>
+            <div class="text-xs font-bold text-brand-500 uppercase tracking-wider mb-2">AI Insights & Engineering Philosophy</div>
+            <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">
+              AI 实战思考与架构真经
+            </h2>
+            <p class="text-sm text-slate-600 mt-1">
+              不谈空洞概念，只聊从政企千万级实战与 AI 研发中沉淀的第一性原理。
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0 text-xs text-slate-400">
+            欢迎针对观点深入交流
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- 思考卡片 1 -->
+          <article class="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 space-y-3">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="badge-pill bg-blue-50 text-brand-500">核心第一性原理</span>
+              <span class="text-slate-400">上下文优先律</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-navy hover:text-brand-500 transition-colors">
+              智能的物理本质是上下文：为什么绝大多数 Agent 根在数据与状态工程？
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              很多时候 Agent 表现失常不是模型参数不够，而是工程层未给足真实、高保真、时序对齐的上下文物理证据。从政企数据要素的“双域流转”经验来看，给模型输入干净确定、可溯源的数据管道，远比调玄学 Prompt 坚固百倍。
+            </p>
+            <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-brand-500">
+              <span class="inline-flex items-center gap-1 cursor-pointer hover:underline">
+                阅读深度手记 <i class="ph ph-arrow-right"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- 思考卡片 2 -->
+          <article class="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 space-y-3">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="badge-pill bg-cyan-50 text-cyan-700">工程避坑法则</span>
+              <span class="text-slate-400">抗伪需求律</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-navy hover:text-brand-500 transition-colors">
+              拒绝“打地鼠”式修补：复杂系统的抗伪需求与物理反馈闭环
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              在需求未经过端到端垂直切片检验前，不要臆造复杂流程；当输出产生偏差时，严禁通过硬编码单测特例来逆向拟合业务。必须坚守 N+1 泛化性门禁与因果链路穿透，让系统具备自我愈合的反脆弱性。
+            </p>
+            <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-brand-500">
+              <span class="inline-flex items-center gap-1 cursor-pointer hover:underline">
+                阅读深度手记 <i class="ph ph-arrow-right"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- 思考卡片 3 -->
+          <article class="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 space-y-3">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="badge-pill bg-indigo-50 text-indigo-700">数据要素 & AI</span>
+              <span class="text-slate-400">可信计算</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-navy hover:text-brand-500 transition-colors">
+              可用不可见、可控可计量：数据要素底座如何赋能企业级可信智能体
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              结合某市数据公共服务平台实践，剖析多方联合计算与跨域加密中转。大模型要想在涉及高敏财务、医疗与政务业务中落地，必须引入区块链存证确权与基于密码学的隐私计算保护，确保操作可查、调用可计量。
+            </p>
+            <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-brand-500">
+              <span class="inline-flex items-center gap-1 cursor-pointer hover:underline">
+                阅读深度手记 <i class="ph ph-arrow-right"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- 思考卡片 4 -->
+          <article class="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 space-y-3">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="badge-pill bg-emerald-50 text-emerald-700">开源架构设计</span>
+              <span class="text-slate-400">透明解耦</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-navy hover:text-brand-500 transition-colors">
+              开源基础框架的设计哲学：为什么 Agent 需要极简、源码透明与模块解耦？
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              开源软件源码公开透明，Agent 一读就知道每个模块是干什么用的。坚决杜绝臃肿黑盒框架绑架与单体泥潭。系统必须职责单一，Router 路由、Executor 执行、Memory 记忆各司其职，源码透明可测，方能支撑顶模全量重构。
+            </p>
+            <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-brand-500">
+              <span class="inline-flex items-center gap-1 cursor-pointer hover:underline">
+                阅读深度手记 <i class="ph ph-arrow-right"></i>
+              </span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 6. 专业资历与权威认证 ================= -->
+    <section id="credentials" class="py-16 bg-white border-y border-blue-100/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-xs font-bold text-brand-500 uppercase tracking-wider mb-2">Qualifications & Honors</div>
+          <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">
+            高阶专业资质、权威认证与客户赞誉
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- 核心高阶职称资质 -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-500 flex items-center justify-center text-xl">
+                <i class="ph-bold ph-shield-check"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-navy">系统架构与 AI 高级资质</h3>
+                <p class="text-xs text-slate-400">权威技术水平评定</p>
+              </div>
+            </div>
+            <div class="space-y-2.5 text-xs text-slate-600">
+              <div class="p-2.5 rounded-lg bg-blue-50/50 border border-blue-100">
+                <div class="font-bold text-slate-800">系统架构设计师（高级）</div>
+                <div class="text-slate-500 text-[11px]">具备大型分布式、高并发与跨域复杂系统架构设计能力</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-cyan-50/50 border border-cyan-100">
+                <div class="font-bold text-slate-800">人工智能应用开发工程师（高级）</div>
+                <div class="text-slate-500 text-[11px]">面向大模型工程化、Agent 编排与行业垂直落地应用</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-emerald-50/50 border border-emerald-100">
+                <div class="font-bold text-slate-800">人工智能训练师</div>
+                <div class="text-slate-500 text-[11px]">具备场景数据标注治理、微调训练与评测闭环能力</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 权威证书与学科 -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+                <i class="ph-bold ph-certificate"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-navy">项目管理与行业认证</h3>
+                <p class="text-xs text-slate-400">国际与头部云厂商认证</p>
+              </div>
+            </div>
+            <div class="space-y-2.5 text-xs text-slate-600">
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-emerald-50/50 border border-emerald-100">
+                <span class="font-bold text-slate-800">PMP 项目管理专业人士</span>
+                <span class="text-emerald-700 font-semibold">PMI 权威认证</span>
+              </div>
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <span class="font-bold text-slate-800">阿里云 Clouder 容器架构认证</span>
+                <span class="text-slate-500">企业级应用部署</span>
+              </div>
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <span class="font-bold text-slate-800">阿里云 Clouder ECS 运维认证</span>
+                <span class="text-slate-500">弹性计算认证</span>
+              </div>
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <span class="font-bold text-slate-800">信息管理与信息系统 本科</span>
+                <span class="text-slate-500">工学科班出身</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 荣誉背书 -->
+          <div class="glass-card rounded-2xl p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
+                <i class="ph-bold ph-medal"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-navy">实战荣誉与客户信函</h3>
+                <p class="text-xs text-slate-400">真实权威背书</p>
+              </div>
+            </div>
+            <div class="space-y-2.5 text-xs text-slate-600">
+              <div class="p-2.5 rounded-lg bg-amber-50/40 border border-amber-100">
+                <span class="font-bold text-slate-800">市级大数据发展集团 感谢信</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">点名表扬在数据合规流通平台建设中的关键业务支撑</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <span class="font-bold text-slate-800">地方经信局 借调函</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">作为民营企业专家被政府部门指定抽调开展数据赋能</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <span class="font-bold text-slate-800">华为科技 点名表扬</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">“新材云创”项目现场服务获得华为技术团队首位点名表彰</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 7. 交流与联系我们 ================= -->
+    <section id="connect" class="py-16 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-card rounded-3xl p-8 sm:p-12 border border-blue-200 shadow-xl bg-gradient-to-br from-white via-white to-blue-50/50">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-6 space-y-4">
+              <div class="text-xs font-bold text-brand-500 uppercase tracking-wider">Connect & Collaborate</div>
+              <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">
+                随时保持联系与深度交流
+              </h2>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                无论是关于 <strong class="text-brand-navy">MOSS 基础框架共建</strong>、<strong class="text-brand-navy">数据要素平台顶层设计</strong>，还是 <strong class="text-brand-navy">AI 产品商业化与落地</strong>，我始终保持开放与真诚。欢迎随时沟通、交流与合作。
+              </p>
+
+              <!-- 联系方式列表 -->
+              <div class="space-y-3 pt-2 text-sm">
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-blue-100">
+                  <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-500 flex items-center justify-center text-lg">
+                    <i class="ph-bold ph-phone"></i>
+                  </div>
+                  <div class="flex-grow">
+                    <div class="text-[11px] text-slate-400">电话 / 微信同号</div>
+                    <div class="font-bold text-slate-800">15372323999</div>
+                  </div>
+                  <button onclick="navigator.clipboard.writeText('15372323999'); alert('电话号码已复制到剪贴板！')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-brand-500 text-xs font-medium transition-colors">
+                    复制号码
+                  </button>
+                </div>
+
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-blue-100">
+                  <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-500 flex items-center justify-center text-lg">
+                    <i class="ph-bold ph-envelope"></i>
+                  </div>
+                  <div class="flex-grow">
+                    <div class="text-[11px] text-slate-400">电子邮箱</div>
+                    <div class="font-bold text-slate-800">753957051@qq.com</div>
+                  </div>
+                  <a href="mailto:753957051@qq.com" class="px-3 py-1.5 rounded-lg bg-brand-50 hover:bg-brand-100 text-brand-600 text-xs font-medium transition-colors">
+                    发起邮件
+                  </a>
+                </div>
+
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-blue-100">
+                  <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-500 flex items-center justify-center text-lg">
+                    <i class="ph-bold ph-map-pin"></i>
+                  </div>
+                  <div>
+                    <div class="text-[11px] text-slate-400">所在常驻城市</div>
+                    <div class="font-bold text-slate-800">长三角核心区（支持全国线上 / 远程交流）</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 右侧交流留言快速表单/说明 -->
+            <div class="lg:col-span-6 bg-blue-50/60 rounded-2xl p-6 sm:p-8 border border-blue-100 space-y-4">
+              <h3 class="font-bold text-brand-navy text-base flex items-center gap-2">
+                <i class="ph ph-chat-teardrop-text text-brand-500 text-xl"></i>
+                <span>交流意向分类</span>
+              </h3>
+              <p class="text-xs text-slate-500">
+                可直接添加微信并备注来意，以下方向均可深入探讨：
+              </p>
+
+              <div class="space-y-2.5 text-xs">
+                <div class="p-3 bg-white rounded-xl border border-blue-100">
+                  <div class="font-bold text-brand-navy">1. MOSS 开源基础框架与 AI 开发者探讨</div>
+                  <div class="text-slate-500 mt-0.5">极简内核源码获取、架构规范交流、Agent 框架实证</div>
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-blue-100">
+                  <div class="font-bold text-brand-navy">2. 数据要素市场化与公共服务平台建设咨询</div>
+                  <div class="text-slate-500 mt-0.5">双域融合部署、数据资产化产品设计、合规制度体系搭建</div>
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-blue-100">
+                  <div class="font-bold text-brand-navy">3. 重大数字化工程与产业大脑解决方案</div>
+                  <div class="text-slate-500 mt-0.5">顶层规划、可行性研究报告、复杂系统全流程推进与统筹</div>
+                </div>
+              </div>
+
+              <div class="pt-2 text-center">
+                <a href="mailto:753957051@qq.com?subject=【网站来信】交流合作意向" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-xs shadow-md shadow-blue-500/20 transition-all">
+                  <i class="ph ph-paper-plane-tilt text-base"></i>
+                  <span>一键通过邮件发送交流意向</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 页脚 ================= -->
+  <footer class="bg-brand-navy text-slate-400 py-10 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+        <span class="text-white font-bold tracking-tight">钱胤卿 · 数字空间 (Personal Digital Garden)</span>
+      </div>
+      <div class="text-slate-400 text-center sm:text-right">
+        <span>© 2026 Yinqing Qian. 保留所有权利 · 聚焦产业数据要素与 MOSS 开源基础框架</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
