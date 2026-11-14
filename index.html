@@ -445,81 +445,171 @@
           </div>
 
           <!-- N x 1 x M 通用范式 + v4.15 最新突破 -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            <div class="lg:col-span-5 space-y-4">
-              <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2">
-                <i class="ph-bold ph-sparkle"></i>
-                <span>最新技术动态与 N × 1 × M 通用范式</span>
-              </h4>
+          <div class="space-y-4">
+            <h4 class="text-sm font-bold text-cyan-300 flex items-center gap-2">
+              <i class="ph-bold ph-sparkle"></i>
+              <span>最新技术动态与 N × 1 × M 通用范式</span>
+            </h4>
 
-              <div class="space-y-3 text-xs">
-                <div class="p-3.5 rounded-xl bg-deep-base/80 border border-white/[0.07]">
-                  <div class="font-bold text-white flex items-center justify-between">
-                    <span>N 端无界感知（Any Data Producer）</span>
-                    <span class="text-[10px] font-mono text-cyan-400">阶段A/B已验收</span>
-                  </div>
-                  <p class="text-slate-400 mt-1 leading-relaxed">
-                    打通外部微信商机流、钉钉本地暗采集与图片 OCR 补采、协同信标文档、随身会议硬件与 MES/ERP Webhook，双平台工作语义自动归类。
-                  </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+              <div class="p-4 rounded-xl bg-deep-base/80 border border-white/[0.07]">
+                <div class="font-bold text-white flex items-center justify-between gap-2">
+                  <span>N 端无界感知 (Producer)</span>
+                  <span class="text-[10px] font-mono text-cyan-400 shrink-0">阶段A/B验收</span>
                 </div>
+                <p class="text-slate-400 mt-1.5 leading-relaxed">
+                  打通外部微信商机流、钉钉本地暗采集与图片 OCR 补采、协同信标文档、随身会议硬件与 MES/ERP Webhook，双平台工作语义自动归类。
+                </p>
+              </div>
 
-                <div class="p-3.5 rounded-xl bg-deep-base/80 border border-white/[0.07]">
-                  <div class="font-bold text-white flex items-center justify-between">
-                    <span>1 个统一活体记忆主脑（moss_core.db）</span>
-                    <span class="text-[10px] font-mono text-blue-400">v4.15 核心升级</span>
-                  </div>
-                  <p class="text-slate-400 mt-1 leading-relaxed">
-                    落地 <strong class="text-slate-200">v4.15 统一非结构化与表格数据智能分块标准</strong>（合并单元格广播填充 + 启发式表头探测 + 行级自包含切片），编织「客户-合同-项目星轨-现金流」数字海马体。
-                  </p>
+              <div class="p-4 rounded-xl bg-deep-base/80 border border-white/[0.07]">
+                <div class="font-bold text-white flex items-center justify-between gap-2">
+                  <span>1 个活体记忆主脑 (moss_core.db)</span>
+                  <span class="text-[10px] font-mono text-blue-400 shrink-0">v4.15 升级</span>
                 </div>
+                <p class="text-slate-400 mt-1.5 leading-relaxed">
+                  落地 <strong class="text-slate-200">v4.15 统一非结构化与表格数据智能分块标准</strong>（合并单元格广播填充 + 启发式表头探测 + 行级自包含切片），编织「客户-合同-项目星轨-现金流」数字海马体。
+                </p>
+              </div>
 
-                <div class="p-3.5 rounded-xl bg-deep-base/80 border border-white/[0.07]">
-                  <div class="font-bold text-white flex items-center justify-between">
-                    <span>M 路跨生态行动与统御（Commander）</span>
-                    <span class="text-[10px] font-mono text-emerald-400">Context Pack</span>
-                  </div>
-                  <p class="text-slate-400 mt-1 leading-relaxed">
-                    7×24 现金流双引擎主动吹哨（回款节点 &amp; 范围超纲拦截），并通过标准 <code class="text-cyan-300">Context Pack</code> 协议调度桌面 Agent、RPA 与业务 API 闭环执行。
-                  </p>
+              <div class="p-4 rounded-xl bg-deep-base/80 border border-white/[0.07]">
+                <div class="font-bold text-white flex items-center justify-between gap-2">
+                  <span>M 路跨生态行动与统御</span>
+                  <span class="text-[10px] font-mono text-emerald-400 shrink-0">Context Pack</span>
                 </div>
+                <p class="text-slate-400 mt-1.5 leading-relaxed">
+                  7×24 现金流双引擎主动吹哨（回款节点 &amp; 范围超纲拦截），并通过标准 <code class="text-cyan-300">Context Pack</code> 协议调度桌面 Agent、RPA 与业务 API 闭环执行。
+                </p>
               </div>
             </div>
+          </div>
 
-            <!-- 右侧：MOSS 三代跨维度演进图谱 + 实战 UI 缩略画廊 -->
-            <div class="lg:col-span-7 space-y-4">
-              <div class="group relative rounded-xl overflow-hidden border border-white/[0.1] bg-black/50 cursor-pointer"
-                   onclick="openLightbox('assets/moss/moss_evolution_triptych_zh.jpg', 'MOSS 三代跨维度演进图谱（1.0 机架算力 → 2.0 具身550W → 3.0 智子量子态）', '从二维机房逻辑算力中枢，演进至三维物理世界具身协同终端，最终走向高维无界感知的智子数字场域。')">
-                <img src="assets/moss/moss_evolution_triptych_zh.jpg" alt="MOSS 三代跨维度演进图谱" class="w-full h-56 sm:h-64 object-cover group-hover:scale-[1.02] transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-4">
-                  <div>
-                    <div class="text-[10px] font-mono text-rose-300 uppercase">MOSS-EVO-TRIPTYCH-ZH · 点击放大审阅</div>
-                    <div class="text-xs sm:text-sm font-bold text-white">MOSS 1.0 二维算力中枢 ➔ 2.0 三维具身 550W ➔ 3.0 高维智子态</div>
+          <!-- 6 张完整高清实机系统视窗画廊 (aspect-[16/10]) -->
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="ph-bold ph-images text-cyan-400"></i>
+                <span>MOSS 实机系统视窗与工程架构全览（6 组核心界面）</span>
+              </h4>
+              <span class="text-[11px] font-mono text-cyan-400/80 hidden sm:inline">CLICK_TO_ENLARGE ↗</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+              <!-- 视窗 1：智能体核心控制台 -->
+              <div onclick="openLightbox('assets/moss/ui_console.png', '1. 智能体核心控制台 (Workbench)', '常驻全局导航枢纽，实时呈现 Agent 运行状态、上下文意图流动及业务调度总览。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
+                  <img src="assets/moss/ui_console.png" alt="MOSS 控制台工作台" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
+                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
                   </div>
-                  <span class="w-8 h-8 rounded-lg bg-white/10 backdrop-blur flex items-center justify-center text-white">
-                    <i class="ph-bold ph-magnifying-glass-plus"></i>
-                  </span>
+                </div>
+                <div class="mt-3">
+                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
+                    <span>1. 智能体核心控制台 (Workbench)</span>
+                    <span class="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded-full">Console</span>
+                  </h5>
+                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    常驻全局导航枢纽，实时呈现 Agent 运行状态、上下文意图流动及业务调度总览。
+                  </p>
                 </div>
               </div>
 
-              <!-- 现有高清实机截图缩略网格 -->
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                <button onclick="openLightbox('assets/moss/arch_three_layer.png', 'MOSS 三层认知架构图', '端侧无感感知层 + 统一 WAL 活体记忆层 + 跨生态行动统御层。')" class="group relative rounded-lg overflow-hidden border border-white/[0.08] bg-deep-base text-left">
-                  <img src="assets/moss/arch_three_layer.png" alt="三层架构" class="w-full h-20 object-cover group-hover:scale-105 transition-transform">
-                  <div class="p-1.5 text-[10px] text-slate-300 truncate">三层认知架构</div>
-                </button>
-                <button onclick="openLightbox('assets/moss/ui_console.png', 'MOSS 控制中心驾驶舱', '实时监控多源感知脉冲、现金流吹哨与任务星轨状态。')" class="group relative rounded-lg overflow-hidden border border-white/[0.08] bg-deep-base text-left">
-                  <img src="assets/moss/ui_console.png" alt="控制中心" class="w-full h-20 object-cover group-hover:scale-105 transition-transform">
-                  <div class="p-1.5 text-[10px] text-slate-300 truncate">控制中心总览</div>
-                </button>
-                <button onclick="openLightbox('assets/moss/ui_connectors.png', 'MOSS 多源连接器矩阵', '微信、钉钉、协同信标与企业台账的合规无感接入管理。')" class="group relative rounded-lg overflow-hidden border border-white/[0.08] bg-deep-base text-left">
-                  <img src="assets/moss/ui_connectors.png" alt="连接器矩阵" class="w-full h-20 object-cover group-hover:scale-105 transition-transform">
-                  <div class="p-1.5 text-[10px] text-slate-300 truncate">多源连接器</div>
-                </button>
-                <button onclick="openLightbox('assets/moss/ui_ebbinghaus.png', 'MOSS 数字海马体与艾宾浩斯记忆引擎', '按因果衰减与重要度权重动态巩固企业核心事实记忆。')" class="group relative rounded-lg overflow-hidden border border-white/[0.08] bg-deep-base text-left">
-                  <img src="assets/moss/ui_ebbinghaus.png" alt="记忆引擎" class="w-full h-20 object-cover group-hover:scale-105 transition-transform">
-                  <div class="p-1.5 text-[10px] text-slate-300 truncate">海马体记忆流</div>
-                </button>
+              <!-- 视窗 2：4M1E 实体与企业全要素图谱 -->
+              <div onclick="openLightbox('assets/moss/ui_4m1e.png', '2. 4M1E 实体与企业全要素图谱', '人、机、料、法、环物理语义关联，为大模型推理提供坚固的产业上下文证据链。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
+                  <img src="assets/moss/ui_4m1e.png" alt="4M1E 实体记忆图谱" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
+                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
+                    <span>2. 4M1E 实体与全要素图谱</span>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full">4M1E Graph</span>
+                  </h5>
+                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    人、机、料、法、环物理语义关联，为大模型推理提供坚固的产业上下文证据链。
+                  </p>
+                </div>
               </div>
+
+              <!-- 视窗 3：艾宾浩斯时序记忆衰减引擎 -->
+              <div onclick="openLightbox('assets/moss/ui_ebbinghaus.png', '3. 艾宾浩斯时序记忆衰减引擎', '模拟人类大脑遗忘曲线，实现长短期记忆自主加权、动态蒸馏与时序对齐。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
+                  <img src="assets/moss/ui_ebbinghaus.png" alt="艾宾浩斯时序记忆引擎" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
+                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
+                    <span>3. 艾宾浩斯时序记忆引擎</span>
+                    <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded-full">Memory</span>
+                  </h5>
+                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    模拟人类大脑遗忘曲线，实现长短期记忆自主加权、动态蒸馏与时序对齐。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 4：MOSS 极简三层架构蓝图 -->
+              <div onclick="openLightbox('assets/moss/arch_three_layer.png', '4. MOSS 极简三层架构蓝图', '上层意图调度 ➔ 中层记忆图谱与执行内核 ➔ 底层工具与异构算力基础设施。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative p-1">
+                  <img src="assets/moss/arch_three_layer.png" alt="MOSS 三层架构蓝图" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
+                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
+                    <span>4. MOSS 极简三层架构蓝图</span>
+                    <span class="text-[10px] font-mono text-blue-400 bg-blue-500/10 px-1.5 py-0.5 rounded-full">Architecture</span>
+                  </h5>
+                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    上层意图调度 ➔ 中层记忆图谱与执行内核 ➔ 底层工具与异构算力基础设施。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 5：多端协同与企业通讯连接器 -->
+              <div onclick="openLightbox('assets/moss/ui_connectors.png', '5. 多端协同与企业通讯连接器', '无缝连接企业办公端（微信/钉钉）、移动终端与本地守护进程，实现端云安全协同。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
+                  <img src="assets/moss/ui_connectors.png" alt="多端协同与连接器中枢" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
+                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
+                    <span>5. 多端协同与企业通讯连接器</span>
+                    <span class="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded-full">Connectors</span>
+                  </h5>
+                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    无缝连接企业办公端（微信/钉钉）、移动终端与本地守护进程，实现端云安全协同。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 视窗 6：软硬一体自主智能终端设计 (CMF) -->
+              <div onclick="openLightbox('assets/moss/04_cmf_prototype_render_zh.jpg', '6. 软硬一体自主智能终端设计 (CMF)', '探索自主可控本地算力盒子与端侧 AI 一体机的 CMF 工业设计理念。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
+                  <img src="assets/moss/04_cmf_prototype_render_zh.jpg" alt="MOSS CMF 原型设计渲染" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
+                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
+                    <span>6. 软硬一体自主智能终端 (CMF)</span>
+                    <span class="text-[10px] font-mono text-rose-400 bg-rose-500/10 px-1.5 py-0.5 rounded-full">Hardware</span>
+                  </h5>
+                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    探索自主可控本地算力盒子与端侧 AI 一体机的 CMF 工业设计理念。
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
