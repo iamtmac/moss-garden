@@ -6,10 +6,10 @@
   <title>钱胤卿 | AI产品经理 · 智能化解决方案专家 · MOSS & 集约运维</title>
   <meta name="description" content="钱胤卿的个人数字主页。AI产品经理与智能化解决方案专家，10年+复杂中台与数据要素平台架构经验，聚焦平台底座抽象、数据闭环、AI Agent 工程化、MOSS 企业领航主脑与政企集约化运维套件。">
 
-  <!-- 字体资源: Inter & Plus Jakarta Sans & JetBrains Mono -->
+  <!-- 字体资源: 异步非阻塞加载，避免弱网阻塞首屏 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -58,9 +58,9 @@
     }
   </script>
 
-  <!-- GSAP 动画套件与 ScrollTrigger 官方库 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- GSAP 动画套件与 ScrollTrigger 官方库 (defer 非阻塞加载) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <style>
     :root {
@@ -260,7 +260,7 @@
             <div class="flex flex-col sm:flex-row sm:items-center gap-5 anim-titles">
               <div class="relative shrink-0">
                 <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-cyan-500/40 shadow-2xl shadow-cyan-500/15 bg-deep-surface">
-                  <img src="assets/avatar.jpg" alt="钱胤卿个人头像" class="w-full h-full object-cover">
+                  <img src="assets/avatar.webp" alt="钱胤卿个人头像" decoding="async" class="w-full h-full object-cover">
                 </div>
                 <span class="absolute -bottom-1.5 -right-1.5 px-2 py-0.5 rounded-md bg-deep-base border border-emerald-500/40 text-[10px] font-mono text-emerald-400 shadow">
                   10Y+ EXP
@@ -489,52 +489,33 @@
             <div class="flex items-center justify-between">
               <h4 class="text-sm font-bold text-white flex items-center gap-2">
                 <i class="ph-bold ph-blueprint text-rose-400"></i>
-                <span>MOSS 三代跨维度演进工程图谱（1.0 算力节点 ➔ 2.0 具身 550W ➔ 3.0 智子高维展开）</span>
+                <span>1. MOSS 三代跨维度演进工程图谱（1.0 算力节点 ➔ 2.0 具身 550W ➔ 3.0 智子高维展开）</span>
               </h4>
               <span class="text-[11px] font-mono text-cyan-400/80 hidden sm:inline">CLICK_TO_ENLARGE ↗</span>
             </div>
-            <div onclick="openLightbox('assets/moss/moss_evolution_triptych.jpg', 'MOSS 三代跨维度演进工程图谱', 'MOSS 1.0 二维纯算力机架节点 ➔ MOSS 2.0 三维具身 550W 云台终端 ➔ MOSS 3.0 高维智子展开。')" class="spotlight-card p-2.5 border border-white/[0.1] hover:border-cyan-500/40 cursor-pointer group">
+            <div onclick="openLightbox('assets/moss/moss_evolution_triptych.webp', '1. MOSS 三代跨维度演进工程图谱', 'MOSS 1.0 二维纯算力机架节点 ➔ MOSS 2.0 三维具身 550W 云台终端 ➔ MOSS 3.0 高维智子展开。')" class="spotlight-card p-2.5 border border-white/[0.1] hover:border-cyan-500/40 cursor-pointer group">
               <div class="rounded-lg overflow-hidden bg-[#F2F1EC]">
-                <img src="assets/moss/moss_evolution_triptych.jpg" alt="MOSS 三代跨维度演进工程图谱" class="w-full h-auto object-contain group-hover:scale-[1.01] transition-transform duration-500">
+                <img src="assets/moss/moss_evolution_triptych.webp" alt="MOSS 三代跨维度演进工程图谱" loading="lazy" decoding="async" class="w-full h-auto object-contain group-hover:scale-[1.01] transition-transform duration-500">
               </div>
             </div>
           </div>
 
-          <!-- 6 张完整高清实机系统视窗画廊 (aspect-[16/10]) -->
+          <!-- 核心架构与全要素图谱 (精选 2 组核心视窗) -->
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <h4 class="text-sm font-bold text-white flex items-center gap-2">
                 <i class="ph-bold ph-images text-cyan-400"></i>
-                <span>MOSS 实机系统视窗与工程架构全览（6 组核心界面）</span>
+                <span>MOSS 核心架构与全要素图谱</span>
               </h4>
               <span class="text-[11px] font-mono text-cyan-400/80 hidden sm:inline">CLICK_TO_ENLARGE ↗</span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
-              <!-- 视窗 1：智能体核心控制台 -->
-              <div onclick="openLightbox('assets/moss/ui_console.png', '1. 智能体核心控制台 (Workbench)', '常驻全局导航枢纽，实时呈现 Agent 运行状态、上下文意图流动及业务调度总览。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
-                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
-                  <img src="assets/moss/ui_console.png" alt="MOSS 控制台工作台" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
-                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
-                    <span>1. 智能体核心控制台 (Workbench)</span>
-                    <span class="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded-full">Console</span>
-                  </h5>
-                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
-                    常驻全局导航枢纽，实时呈现 Agent 运行状态、上下文意图流动及业务调度总览。
-                  </p>
-                </div>
-              </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
               <!-- 视窗 2：4M1E 实体与企业全要素图谱 -->
-              <div onclick="openLightbox('assets/moss/ui_4m1e.png', '2. 4M1E 实体与企业全要素图谱', '人、机、料、法、环物理语义关联，为大模型推理提供坚固的产业上下文证据链。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+              <div onclick="openLightbox('assets/moss/ui_4m1e.webp', '2. 4M1E 实体与全要素图谱', '人、机、料、法、环物理语义关联，为大模型推理提供坚固的产业上下文证据链。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
                 <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
-                  <img src="assets/moss/ui_4m1e.png" alt="4M1E 实体记忆图谱" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <img src="assets/moss/ui_4m1e.webp" alt="4M1E 实体记忆图谱" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                   <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
                     <i class="ph-bold ph-arrows-out-simple text-xs"></i>
                   </div>
@@ -550,78 +531,21 @@
                 </div>
               </div>
 
-              <!-- 视窗 3：艾宾浩斯时序记忆衰减引擎 -->
-              <div onclick="openLightbox('assets/moss/ui_ebbinghaus.png', '3. 艾宾浩斯时序记忆衰减引擎', '模拟人类大脑遗忘曲线，实现长短期记忆自主加权、动态蒸馏与时序对齐。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
-                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
-                  <img src="assets/moss/ui_ebbinghaus.png" alt="艾宾浩斯时序记忆引擎" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
-                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
-                    <span>3. 艾宾浩斯时序记忆引擎</span>
-                    <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded-full">Memory</span>
-                  </h5>
-                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
-                    模拟人类大脑遗忘曲线，实现长短期记忆自主加权、动态蒸馏与时序对齐。
-                  </p>
-                </div>
-              </div>
-
-              <!-- 视窗 4：MOSS 极简三层架构蓝图 -->
-              <div onclick="openLightbox('assets/moss/arch_three_layer.png', '4. MOSS 极简三层架构蓝图', '上层意图调度 ➔ 中层记忆图谱与执行内核 ➔ 底层工具与异构算力基础设施。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
+              <!-- 视窗 3：MOSS 极简三层架构蓝图 -->
+              <div onclick="openLightbox('assets/moss/arch_three_layer.webp', '3. MOSS 极简三层架构蓝图', '上层意图调度 ➔ 中层记忆图谱与执行内核 ➔ 底层工具与异构算力基础设施。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
                 <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative p-1">
-                  <img src="assets/moss/arch_three_layer.png" alt="MOSS 三层架构蓝图" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                  <img src="assets/moss/arch_three_layer.webp" alt="MOSS 三层架构蓝图" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                   <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
                     <i class="ph-bold ph-arrows-out-simple text-xs"></i>
                   </div>
                 </div>
                 <div class="mt-3">
                   <h5 class="font-bold text-white text-xs flex items-center justify-between">
-                    <span>4. MOSS 极简三层架构蓝图</span>
+                    <span>3. MOSS 极简三层架构蓝图</span>
                     <span class="text-[10px] font-mono text-blue-400 bg-blue-500/10 px-1.5 py-0.5 rounded-full">Architecture</span>
                   </h5>
                   <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
                     上层意图调度 ➔ 中层记忆图谱与执行内核 ➔ 底层工具与异构算力基础设施。
-                  </p>
-                </div>
-              </div>
-
-              <!-- 视窗 5：多端协同与企业通讯连接器 -->
-              <div onclick="openLightbox('assets/moss/ui_connectors.png', '5. 多端协同与企业通讯连接器', '无缝连接企业办公端（微信/钉钉）、移动终端与本地守护进程，实现端云安全协同。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
-                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
-                  <img src="assets/moss/ui_connectors.png" alt="多端协同与连接器中枢" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
-                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
-                    <span>5. 多端协同与企业通讯连接器</span>
-                    <span class="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded-full">Connectors</span>
-                  </h5>
-                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
-                    无缝连接企业办公端（微信/钉钉）、移动终端与本地守护进程，实现端云安全协同。
-                  </p>
-                </div>
-              </div>
-
-              <!-- 视窗 6：软硬一体自主智能终端设计 (CMF) -->
-              <div onclick="openLightbox('assets/moss/04_cmf_prototype_render_zh.jpg', '6. 软硬一体自主智能终端设计 (CMF)', '探索自主可控本地算力盒子与端侧 AI 一体机的 CMF 工业设计理念。')" class="spotlight-card p-3.5 border border-white/[0.08] hover:border-cyan-500/50 cursor-pointer group">
-                <div class="aspect-[16/10] rounded-lg overflow-hidden bg-black/80 border border-white/[0.06] relative">
-                  <img src="assets/moss/04_cmf_prototype_render_zh.jpg" alt="MOSS CMF 原型设计渲染" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                  <div class="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-black/80 flex items-center justify-center text-white/70 group-hover:text-cyan-300 transition-colors">
-                    <i class="ph-bold ph-arrows-out-simple text-xs"></i>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-bold text-white text-xs flex items-center justify-between">
-                    <span>6. 软硬一体自主智能终端 (CMF)</span>
-                    <span class="text-[10px] font-mono text-rose-400 bg-rose-500/10 px-1.5 py-0.5 rounded-full">Hardware</span>
-                  </h5>
-                  <p class="text-[11px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
-                    探索自主可控本地算力盒子与端侧 AI 一体机的 CMF 工业设计理念。
                   </p>
                 </div>
               </div>
@@ -1282,19 +1206,28 @@
 
   <!-- ================= 交互脚本与 GSAP 动画 ================= -->
   <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    // 1. 聚光灯跟随
-    document.querySelectorAll('.spotlight-card').forEach((card) => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+    // 1. 聚光灯跟随 (rAF 节流 + 仅桌面端指针设备启用)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.querySelectorAll('.spotlight-card').forEach((card) => {
+        let rafId = null;
+        card.addEventListener('mousemove', (e) => {
+          if (rafId) return;
+          const clientX = e.clientX;
+          const clientY = e.clientY;
+          rafId = requestAnimationFrame(() => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${clientY - rect.top}px`);
+            rafId = null;
+          });
+        }, { passive: true });
       });
-    });
+    }
 
-    // 2. 首屏入场动画
+    // 2. 首屏入场动画 (兼容 defer 加载)
     window.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap === 'undefined') return;
+      if (typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
       const heroTl = gsap.timeline({ defaults: { ease: 'power2.out' } });
       heroTl
         .from('.anim-badge', { y: -12, opacity: 0, duration: 0.45 })
